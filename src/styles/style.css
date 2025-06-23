@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../assets/fonts/LabGrotesque-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dela Gothic One';
+    src: url('../assets/fonts/DelaGothicOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../assets/fonts/LabGrotesque-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../assets/fonts/LabGrotesque-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../assets/fonts/LabGrotesque-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-white: #FFFFFF;
+    --color-white-alternate: #DCDCDC;
+
+    --color-green: #1A7430;
+    --color-green-dark: #0F511E;
+    --color-green-light: #21983E;
+    --color-green-light-alternate: #25AD46;
+
+    --color-green-linear: linear-gradient(42deg, #0A883B 0%, #45BD4A 86.6%);
+
+    --color-black: #323232;
+    --color-black-35: rgba(0, 0, 0, 0.35);;
+
+    --color-gray-10: rgba(50, 50, 50, 0.10);
+    --color-gray-30: rgba(50, 50, 50, 0.30);
+    --color-gray-50: rgba(50, 50, 50, 0.50);
+    --color-gray-60: rgba(50, 50, 50, 0.60);
+    --color-gray-80: rgba(50, 50, 50, 0.80);
+}

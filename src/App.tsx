@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from "./sections/Header";
 import ProcessSteps from "./sections/ProcessSteps";
 import Services from "./sections/Services";
 import Mission from "./sections/Mission";
@@ -9,11 +8,11 @@ import Footer from "./sections/Footer";
 import Benefits from "./sections/Benefits";
 import Values from "./sections/Values";
 import AboutBrand from "./sections/AboutBrand";
+import "./styles/style.css"
 
 function App() {
   return (
     <div className="App">
-        <Header/>
         <AboutBrand/>
         <ProcessSteps/>
         <Benefits/>

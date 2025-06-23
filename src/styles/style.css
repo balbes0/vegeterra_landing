@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Lab Grotesque';
-    src: url('../assets/fonts/LabGrotesque-Bold.woff2') format('woff2');
+    src: url('../../public/assets/fonts/LabGrotesque-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Dela Gothic One';
-    src: url('../assets/fonts/DelaGothicOne-Regular.woff2') format('woff2');
+    src: url('../../public/assets/fonts/DelaGothicOne-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Lab Grotesque';
-    src: url('../assets/fonts/LabGrotesque-Light.woff2') format('woff2');
+    src: url('../../public/assets/fonts/LabGrotesque-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Lab Grotesque';
-    src: url('../assets/fonts/LabGrotesque-Medium.woff2') format('woff2');
+    src: url('../../public/assets/fonts/LabGrotesque-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'Lab Grotesque';
-    src: url('../assets/fonts/LabGrotesque-Regular.woff2') format('woff2');
+    src: url('../../public/assets/fonts/LabGrotesque-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -57,4 +57,130 @@
     --color-gray-50: rgba(50, 50, 50, 0.50);
     --color-gray-60: rgba(50, 50, 50, 0.60);
     --color-gray-80: rgba(50, 50, 50, 0.80);
+
+    --font-family-base: 'Lab Grotesque';
+    --font-family-accent: 'Dela Gothic One';
+}
+
+body{
+    margin: 0;
+}
+
+/* секция "о бренде" */
+.about-brand-section {
+    background-image: url('../../public/assets/images/AboutBrandBackground.png');
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-black-35); /* применение цветового фильтра повверх изображения */
+    background-blend-mode: overlay;
+    position: relative;
+}
+
+/* шапка внутри секции "о бренде" */
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    align-items: center;
+    max-width: 1160px;
+    color: var(--color-white);
+}
+
+.header-menu-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 32px;
+    margin: 0;
+}
+
+.header-menu-link {
+    text-decoration: none;
+    color: currentColor;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--font-family-base), sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-wrap: nowrap;
+    margin: 0 3px;
+}
+
+.header-menu-item.active {
+    padding-bottom: 3px;
+    border-bottom: 1px solid currentColor;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+}
+
+.header-actions-item{
+    height: 21px;
+    width: 21px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-actions-item-switch{
+    background-color: var(--color-white);
+    border-radius: 15px;
+    width: 58px;
+}
+
+.about-brand{
+    margin: 0;
+    position: absolute;
+    top: 48.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.about-brand-title{
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    font-family: var(--font-family-accent), sans-serif;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+}
+
+.about-brand-subtitle{
+    margin: 0;
+    justify-self: start;
+    font-family: var(--font-family-base), sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.about-brand-button{
+    margin-top: 60px;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    width: 169px;
+    height: 32px;
+    background-color: var(--color-white);
+    align-items: center;
+    border-radius: 20px;
+    border: none;
 }

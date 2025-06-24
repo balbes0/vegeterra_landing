@@ -191,7 +191,7 @@ body{
     max-width: 1160px;
     padding: 20px;
     row-gap: 30px;
-    margin: 60px auto;
+    margin: 60px auto auto;
 }
 
 .title-process-steps-section{
@@ -220,7 +220,7 @@ body{
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    background-color: var(--color-green-dark);
+    background-color: var(--color-green);
     color: var(--color-white);
     width: max(169px, 188px);
     min-height: 32px;
@@ -290,6 +290,61 @@ body{
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
+    line-height: 20px;
+    color: var(--color-black);
+}
+
+.benefits-section{
+    max-width: 1160px;
+    padding: 20px;
+    margin: 20px auto auto;
+}
+
+.benefits-title{
+    max-width: 325px;
+    margin: 0 0 30px;
+    color: var(--color-green-dark);
+    font-family: var(--font-family-accent), sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.benefit-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.benefit-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    max-width: 570px;
+}
+
+.benefit-card-img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.benefit-card-description{
+    flex-grow: 1;
+    padding: 25px 30px;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    position: relative;
+    margin: -25px 0 0;
+    background-color: var(--color-white);
+    z-index: 2;
+    border: 1px solid var(--color-white-alternate);
+    border-radius: 16px;
+    white-space: pre-line;
     line-height: 20px;
     color: var(--color-black);
 }

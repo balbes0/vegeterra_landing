@@ -383,6 +383,50 @@ body{
     margin-bottom: 20px;
 }
 
-ul::marker {
-    font-weight: bold;
+.mission-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1160px;
+    height: max(290px, 400px);
+    padding: 20px;
+    background-color: var(--color-green);
+    margin: 20px auto;
+    border-radius: 32px;
+}
+
+.mission-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-white);
+    align-items: center;
+    text-align: center;
+}
+
+.mission-title{
+    max-width: 668px;
+    font-family: var(--font-family-accent), sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+.mission-section p:first-child{
+    max-width: 485px;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.mission-section p:last-child{
+    max-width: 374px;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
 }

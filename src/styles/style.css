@@ -430,3 +430,44 @@ body{
     font-weight: 400;
     line-height: 22px;
 }
+
+.values-section{
+    max-width: 1160px;
+    padding: 20px;
+    margin: 30px auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.value-card{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    text-align: center;
+    color: var(--color-black);
+}
+
+.value-card-image{
+    height: 95px;
+}
+
+.value-card-title{
+    margin: 0;
+    max-width: 251px;
+    font-family: var(--font-family-accent), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.value-card-description{
+    max-width: 251px;
+    margin: 0;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}

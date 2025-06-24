@@ -184,3 +184,62 @@ body{
     border-radius: 20px;
     border: none;
 }
+
+.process-steps-section{
+    margin: auto;
+    display: flex;
+    max-width: 1160px;
+    padding: 20px;
+}
+
+.process-steps-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.brand-cycle-card {
+    height: 100px;
+    width: 373px;
+    display: flex;
+    align-items: center;
+    align-content: start;
+    padding: 20px;
+    box-sizing: border-box;
+    column-gap: 20px;
+}
+
+.brand-cycle-card.with-image{
+    background-image: url(../../public/assets/images/cylces-border-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.brand-cycle-card.with-border{
+    border-radius: 16px;
+    border: 1px solid var(--color-white-alternate);
+}
+
+.number-cycle-card{
+    flex-shrink: 0;
+    text-align: center;
+    align-content: center;
+    font-family: var(--font-family-accent), sans-serif;
+    color: var(--color-green);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    height: 60px;
+    width: 60px;
+}
+
+.name-cycle-card{
+    text-align: start;
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--color-black);
+}

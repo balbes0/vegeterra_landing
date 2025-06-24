@@ -80,6 +80,7 @@ body{
 
 /* шапка внутри секции "о бренде" */
 .header {
+    overflow: hidden;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -350,6 +351,7 @@ body{
 }
 
 .services-section{
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     max-width: 1160px;
@@ -390,12 +392,13 @@ body{
     max-width: 1160px;
     height: max(290px, 400px);
     padding: 20px;
-    background-color: var(--color-green);
     margin: 20px auto;
-    border-radius: 32px;
 }
 
 .mission-section{
+    background-color: var(--color-green);
+    border-radius: 32px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -432,6 +435,7 @@ body{
 }
 
 .values-section{
+    overflow: hidden;
     max-width: 1160px;
     padding: 20px;
     margin: 30px auto auto;

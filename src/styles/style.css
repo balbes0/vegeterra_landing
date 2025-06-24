@@ -186,10 +186,51 @@ body{
 }
 
 .process-steps-section{
-    margin: auto;
     display: flex;
+    flex-direction: column;
     max-width: 1160px;
     padding: 20px;
+    row-gap: 30px;
+    margin: 60px auto;
+}
+
+.title-process-steps-section{
+    font-family: var(--font-family-accent), sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 285px;
+    color: var(--color-black);
+    line-height: 32px;
+    margin:0;
+}
+
+.description-process-steps-section{
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    max-width: 570px;
+    margin: 0;
+}
+
+.button-process-steps-section{
+    font-family: var(--font-family-base), sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--color-green-dark);
+    color: var(--color-white);
+    width: max(169px, 188px);
+    min-height: 32px;
+    border-radius: 20px;
+    align-self: center;
+    border: none;
+}
+
+.button-camera-icon{
+    margin-left: 5px;
 }
 
 .process-steps-cards{
@@ -232,6 +273,15 @@ body{
     font-weight: 400;
     height: 60px;
     width: 60px;
+    position: relative;
+}
+
+.number-cycle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 
 .name-cycle-card{

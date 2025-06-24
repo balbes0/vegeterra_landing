@@ -11,9 +11,9 @@ const Cycle: React.FC<CycleProps> = ({ isArrowBackground, text, number }) => {
     return (
         <div className={`brand-cycle-card ${isArrowBackground ? 'with-image' : 'with-border'}`}>
             <div className="number-cycle-card">
+                <p className="number-cycle">{number}</p>
                 <ProgressIcon activeCount={Number(number)}/>
             </div>
-
             <strong className="name-cycle-card">{text}</strong>
         </div>
     );

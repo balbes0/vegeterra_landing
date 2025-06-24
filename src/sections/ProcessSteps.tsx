@@ -12,7 +12,13 @@ const steps = [
 
 const ProcessSteps = () => {
     return (
-        <div className="process-steps-section">
+        <section className="process-steps-section">
+
+            <h2 className="title-process-steps-section">Полный цикл внутри бренда</h2>
+
+            <p className="description-process-steps-section">
+                Вегетерра— это производитель натуральных продуктов и экологичных решений для сельского хозяйства. От идеи до готовой продукции:
+            </p>
 
             <div className="process-steps-cards">
                 {steps.map((step, index) => (
@@ -24,7 +30,12 @@ const ProcessSteps = () => {
                     />
                 ))}
             </div>
-        </div>
+
+            <button className="button-process-steps-section">
+                Смотреть видео
+                <img className="button-camera-icon" src="/assets/icons/camera-icon-vector.svg" alt="camera-icon-vector.svg"/>
+            </button>
+        </section>
     );
 };
 

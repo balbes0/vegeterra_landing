@@ -1,4 +1,5 @@
 import React from 'react';
+import LanguageSwitch from "./LanguageSwitch";
 
 const Header = () => {
     return (
@@ -40,7 +41,7 @@ const Header = () => {
                     <img className="header-actions-item-image" src="/assets/icons/telegram-vector.svg" alt="telegram-vector.svg"/>
                 </a>
                 <div className="header-actions-item-switch">
-                    {/*пока хз как реализовать*/}
+                    <LanguageSwitch />
                 </div>
             </div>
         </header>

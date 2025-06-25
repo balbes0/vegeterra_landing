@@ -13,10 +13,18 @@ const PartnershipForm = () => {
                     <div className="actions-buttons">
                         <button>Подробнее о партнёрстве</button>
                         <div className="social-media-buttons">
-                            <img src="/assets/icons/youtube-icon-vector.svg" alt="youtube.svg"/>
-                            <img src="/assets/icons/vk-icon-vector.svg" alt="vk.svg"/>
-                            <img src="/assets/icons/whatsapp-icon-vector-2.svg" alt="whatsapp.svg"/>
-                            <img src="/assets/icons/telegram-icon-vector-2.svg" alt="telegram.svg"/>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/icons/youtube-icon-vector.svg" alt="youtube.svg"/>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/icons/vk-icon-vector.svg" alt="vk.svg"/>
+                            </a>
+                            <a href="">
+                                <img src="/assets/icons/whatsapp-icon-vector-2.svg" alt="whatsapp.svg"/>
+                            </a>
+                            <a href="">
+                                <img src="/assets/icons/telegram-icon-vector-2.svg" alt="telegram.svg"/>
+                            </a>
                         </div>
                     </div>
                 </div>

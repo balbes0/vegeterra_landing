@@ -70,6 +70,7 @@ h2, h3 {
 }
 
 button {
+    cursor: pointer;
     font-family: var(--font-family-base), sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -78,7 +79,7 @@ button {
     height: 32px;
     border-radius: 20px;
     align-items: center;
-    border: none;
+    border: none
 }
 
 .container{
@@ -89,7 +90,6 @@ button {
 
 /* секция "о бренде" */
 .about-brand-section {
-    padding-top: 30px;
     background-image: url('../../public/assets/images/AboutBrandBackground.png');
     height: 750px;
     background-repeat: no-repeat;
@@ -116,6 +116,7 @@ button {
     justify-content: space-between;
     column-gap: 32px;
     margin: 0;
+    padding: 0;
 }
 
 .header-menu-link {
@@ -127,9 +128,11 @@ button {
     font-style: normal;
     text-wrap: nowrap;
     margin: 0 3px;
+    padding: 23px 0;
+    display: inline-block;
 }
 
-.header-menu-item.active {
+.header-menu-item.active .header-menu-link {
     padding-bottom: 3px;
     border-bottom: 1px solid currentColor;
 }
@@ -149,12 +152,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header-actions-item-switch{
-    background-color: var(--color-white);
-    border-radius: 15px;
-    width: 58px;
 }
 
 .about-brand{
@@ -261,20 +258,19 @@ button {
 }
 
 .number-cycle-card{
-    flex-shrink: 0;
-    text-align: center;
-    align-content: center;
-    font-family: var(--font-family-accent), sans-serif;
-    color: var(--color-green);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
     height: 60px;
     width: 60px;
     position: relative;
 }
 
 .number-cycle{
+    color: var(--color-green);
+    font-family: var(--font-family-accent), sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -587,6 +583,7 @@ button {
 
 .partner-ship-section{
     margin-top: 100px;
+    margin-bottom: 120px;
 }
 
 .partner-ship-title{
@@ -605,15 +602,15 @@ button {
     border-radius: 32px;
     border: 1px solid var(--color-white-alternate);
     padding: 6.05% 6.9%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     column-gap: 16%;
+    overflow: hidden;
 }
 
 .partner-ship-contact-actions{
     display: flex;
     flex-direction: column;
-    max-width: 400px;
 }
 
 .description-contact-actions{
@@ -640,6 +637,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    column-gap: 10px;
 }
 
 .actions-buttons > button{
@@ -652,6 +650,10 @@ button {
     display: flex;
     column-gap: 12px;
     justify-content: space-between;
+}
+
+.social-media-buttons a {
+    align-content: center;
 }
 
 .partner-ship-contact-form{
@@ -735,4 +737,58 @@ button {
     font-weight: 300;
     line-height: 13px;
     margin: 0;
+}
+
+.footer-content{
+    border-top: 1px solid var(--color-gray-10);
+    height: 128px;
+    box-sizing: content-box;
+}
+
+.header-actions-item-switch{
+    background-color: var(--color-white);
+    border-radius: 15px;
+    width: 58px;
+}
+
+.language-switch {
+    height: 21px;
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-black);
+    user-select: none;
+}
+
+.language-label {
+    z-index: 2;
+}
+
+.language-label.active {
+    color: var(--color-white);
+}
+
+.language-indicator {
+    position: absolute;
+    width: 29px;
+    height: 100%;
+    background-color: var(--color-green);
+    border-radius: 12px;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: translateX(-1px);
+    z-index: 1;
+}
+
+.language-indicator.right {
+    transform: translateX(calc(100% + 1px));
 }

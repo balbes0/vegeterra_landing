@@ -13,8 +13,8 @@ const ServiceCard = ({iconURL, title, items}: ServiceCardProps) => {
             <h3 className="service-card-title">{title}</h3>
             <ul className="service-card-list">
             {
-                items.map((item) => (
-                    <li className="service-card-list-item">{item}</li>
+                items.map((item, index) => (
+                    <li key={index} className="service-card-list-item">{item}</li>
                 ))
             }
             </ul>

@@ -32,7 +32,7 @@ const services = [
 
 const Services = () => {
     return (
-        <section className="services-section">
+        <section className="services-section container">
             {
                 services.map((service, index) => (
                     <ServiceCard key={index} iconURL={service.iconURL} title={service.title} items={service.items} />

@@ -1,13 +1,13 @@
 import React from 'react';
 import ProgressIcon from "./ProgressIcon";
 
-interface CycleProps {
+type CycleProps = {
     isArrowBackground: boolean;
     text: string;
     number?: number;
 }
 
-const Cycle: React.FC<CycleProps> = ({ isArrowBackground, text, number }) => {
+const Cycle = ({ isArrowBackground, text, number }: CycleProps) => {
     return (
         <div className={`brand-cycle-card ${isArrowBackground ? 'with-image' : 'with-border'}`}>
             <div className="number-cycle-card">

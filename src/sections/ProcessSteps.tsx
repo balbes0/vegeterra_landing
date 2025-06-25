@@ -12,7 +12,7 @@ const steps = [
 
 const ProcessSteps = () => {
     return (
-        <section className="process-steps-section">
+        <section className="process-steps-section container">
 
             <h2 className="title-process-steps-section">Полный цикл внутри бренда</h2>
 

@@ -10,7 +10,7 @@ const benefits = [
 
 const Benefits = () => {
     return (
-        <section className="benefits-section">
+        <section className="benefits-section container">
             <h2 className="benefits-title">Натурально, как должно быть</h2>
             <div className="benefit-card-container">
                 {

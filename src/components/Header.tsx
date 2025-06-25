@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className="header container">
             <a href="#" className="header-logo">
                 <img className="header-logo-image" src="/assets/icons/logo-vector.svg" alt="logo-vector.svg"/>
             </a>

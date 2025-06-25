@@ -26,7 +26,7 @@ const values = [
 
 const Values = () => {
     return (
-        <section className="values-section">
+        <section className="values-section container">
             {
                 values.map((value, index) => (
                     <ValueCard key={index} iconURL={value.iconURL} title={value.title} description={value.description}/>

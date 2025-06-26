@@ -247,6 +247,7 @@ button {
     flex-direction: column;
     row-gap: 30px;
     margin-top: 40px;
+    overflow: hidden;
 }
 
 .title-process-steps-section{
@@ -302,6 +303,8 @@ button {
 .brand-cycle-card.with-image{
     background-image: url(../../public/assets/images/cylces-border-arrow.svg);
     background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 .brand-cycle-card.with-border{
@@ -313,10 +316,6 @@ button {
     height: 60px;
     width: 60px;
     position: relative;
-}
-
-.number-cycle-card > svg{
-
 }
 
 .number-cycle{
@@ -871,6 +870,14 @@ button {
         height: 23px;
     }
 
+    .header-actions-item-switch{
+        width: 63px;
+    }
+
+    .language-switch{
+        padding: 0 8px;
+    }
+
     .about-brand-section{
         height: 600px;
     }
@@ -880,7 +887,6 @@ button {
     }
 
     .brand-cycle-card{
-        width: 293px;
         height: 79px;
     }
 
@@ -1006,4 +1012,8 @@ button {
     .contact-form-title{
         display: none;
     }
+}
+
+@media (max-width: 640px){
+
 }

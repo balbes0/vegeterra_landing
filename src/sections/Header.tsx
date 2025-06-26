@@ -41,18 +41,25 @@ const Header = () => {
             </nav>
             <div className="header-actions">
                 <a href="#" className="header-actions-item">
-                    <img className="header-actions-item-image" src="/assets/icons/whatsapp-vector.svg" alt="whatsapp-vector.svg"/>
+                    <img className="header-actions-item-image" src="/assets/icons/whatsapp-vector.svg"
+                         alt="whatsapp-vector.svg"/>
                 </a>
                 <a href="#" className="header-actions-item">
-                    <img className="header-actions-item-image" src="/assets/icons/telegram-vector.svg" alt="telegram-vector.svg"/>
+                    <img className="header-actions-item-image" src="/assets/icons/telegram-vector.svg"
+                         alt="telegram-vector.svg"/>
                 </a>
                 <div className="header-actions-item-switch">
                     <div className="language-switch" onClick={toggleLang}>
-                        <div className={`language-indicator ${lang === 'en' ? 'right' : 'left'}`} />
+                        <div className={`language-indicator ${lang === 'en' ? 'right' : 'left'}`}/>
                         <p className={`language-label left-label ${lang === 'ru' ? 'active' : ''}`}>РУ</p>
                         <p className={`language-label right-label ${lang === 'en' ? 'active' : ''}`}>EN</p>
                     </div>
                 </div>
+                <button className="header-burger" aria-label="Меню">
+                    <span className="burger-line"></span>
+                    <span className="burger-line"></span>
+                    <span className="burger-line"></span>
+                </button>
             </div>
         </header>
     );

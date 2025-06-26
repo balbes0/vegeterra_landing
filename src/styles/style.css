@@ -88,6 +88,37 @@ button {
     margin: auto;
 }
 
+.slider-controls {
+    display: none;
+    column-gap: 10px;
+    justify-content: end;
+    padding: 20px 20px 0;
+}
+
+.slider-controls svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-controls > button{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    position: relative;
+}
+
+.slider-controls > button:first-child {
+    background-color: transparent;
+    border-radius: 40px;
+    border: 1px solid var(--color-white-alternate);
+}
+
+.slider-controls > button:last-child {
+    background-color: var(--color-green);
+}
+
 /* секция "о бренде" */
 .about-brand-section {
     background-image: url('../../public/assets/images/AboutBrandBackground.png');
@@ -204,6 +235,27 @@ button {
     transform: translateX(calc(100%));
 }
 
+.header-burger {
+    align-self: center;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.burger-line {
+    width: 32px;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
 .about-brand{
     margin: 0;
     position: absolute;
@@ -280,11 +332,6 @@ button {
 }
 
 .process-steps-cards{
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*justify-content: center;*/
-    /*gap: 20px;*/
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -435,10 +482,10 @@ button {
 }
 
 .mission-block{
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: max(290px, 400px);
     margin-top: 60px;
 }
 
@@ -649,16 +696,12 @@ button {
     line-height: 32px;
 }
 
-.partner-ship-title::before {
-    content: "Партнёрство";
-}
-
 .partner-ship-content {
     border-radius: 32px;
     border: 1px solid var(--color-white-alternate);
     padding: 6.05% 6.9%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     column-gap: 6.3%;
     overflow: hidden;
 }
@@ -730,7 +773,6 @@ button {
 .contact-form-inputs{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
     column-gap: 20px;
     row-gap: 20px;
 }
@@ -738,11 +780,6 @@ button {
 .contact-form-inputs > .contact-form-input-block:first-child,
 .contact-form-inputs > .contact-form-input-block:last-child {
     grid-column: span 2;
-}
-
-
-.contact-form-input-block{
-
 }
 
 .contact-form-input-block > p {
@@ -782,11 +819,16 @@ button {
     margin-right: 6.8%;
 }
 
-.contact-form-submit > input{
-    align-self: start;
+.contact-form-submit > div{
+    display: flex;
 }
 
-.contact-form-submit > p {
+.contact-form-submit > div > input{
+    align-self: start;
+    margin-top: 0;
+}
+
+.contact-form-submit > div > p {
     color: var(--color-gray-60);
     text-wrap: wrap;
     font-size: 13px;
@@ -938,7 +980,7 @@ button {
     }
 
     .mission-block{
-        height: max(290px, 328px);
+        height: 328px;
     }
 
     .mission-title{
@@ -1015,5 +1057,304 @@ button {
 }
 
 @media (max-width: 640px){
+    .header-logo-image{
+        width: 119px;
+        height: 30px;
+    }
 
+    .header {
+        padding-top: 20px;
+    }
+
+    .header-menu{
+        display: none;
+    }
+
+    .header-actions a {
+        display: none;
+    }
+
+    .header-burger{
+        display: inline-flex;
+    }
+
+    .about-brand-title{
+        font-size: 36px;
+    }
+
+    .process-steps-section{
+        margin-top: 50px;
+    }
+
+    .title-process-steps-section{
+        font-size: 28px;
+    }
+
+    .process-steps-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .benefits-title{
+        font-size: 28px;
+    }
+
+    .benefits-section{
+        padding-right: 0;
+    }
+
+    .benefit-card-container {
+        overflow: scroll;
+        display: flex;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .benefit-card-container > * {
+        max-width: 542px;
+        flex-shrink: 0;
+    }
+
+    .services-section {
+        overflow-x: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin-top: 40px;
+    }
+
+    .services-section > * {
+        border-radius: 15px;
+        width: 263px;
+        height: 405px;
+        border: 1px solid var(--color-white-alternate);
+        flex-shrink: 0;
+        padding: 20px;
+    }
+
+    .service-card-image{
+        max-height: 56px;
+    }
+
+    .service-card-title{
+        font-size: 16px;
+    }
+
+    .service-card-list-item{
+        margin-bottom: 15px;
+        font-size: 17px;
+    }
+
+    .mission-block{
+        margin-top: 40px;
+    }
+
+    .mission-section{
+        border-radius: 16px;
+    }
+
+    .mission-section p:first-child{
+        font-size: 17px;
+    }
+
+    .mission-section p:last-child{
+        font-size: 17px;
+    }
+
+    .values-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 равные колонки */
+        gap: 30px;                      /* отступ между колонками (по желанию) */
+        margin-top: 55px;
+    }
+
+    .partner-ship-content{
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .actions-buttons{
+        margin-top: 40px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        row-gap: 50px;
+        align-items: start;
+    }
+
+    .contact-form-inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form-submit{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        row-gap: 15px;
+    }
+
+    .contact-form-input-block > p {
+        font-size: 14px;
+    }
+
+    .title-contact-actions{
+        font-size: 18px;
+    }
+
+    .footer-content-first{
+        flex-wrap: wrap;
+    }
+
+    .footer-content-first > div:first-of-type{
+        order: 999;
+        display: flex;
+        column-gap: 20px;
+        margin-top: 15px;
+    }
+
+    .footer-content-second>button{
+        display: none;
+    }
+
+    .slider-controls{
+        display: flex;
+    }
+}
+
+@media (max-width: 480px){
+    .about-brand-subtitle{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18px;
+        min-width: 350px;
+    }
+
+    .benefits-section{
+        margin-top: 80px;
+    }
+
+    .benefits-title{
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .benefit-card-container > * {
+        max-width: 404px;
+        flex-shrink: 0;
+    }
+
+    .services-section{
+        margin-top: 30px;
+    }
+
+    .mission-block{
+        height: 349px;
+    }
+
+    .mission-section{
+        padding: 0 7%;
+        row-gap: 30px;
+    }
+
+    .mission-section * {
+        margin: 0;
+    }
+
+    .mission-title {
+        font-size: 20px;
+    }
+
+    .mission-section p:first-child{
+        font-size: 16px;
+    }
+
+    .mission-section p:last-child{
+        font-size: 16px;
+    }
+
+    .values-section {
+        margin-top: 30px;
+    }
+
+    .value-card-title{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .value-card-description{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 15px;
+    }
+
+    .partner-ship-section{
+        margin-top: 30px;
+    }
+
+    .partner-ship-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .partner-ship-contact-actions{
+        max-width: 100%;
+    }
+
+    .title-contact-actions{
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .actions-buttons{
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        column-gap: 30px;
+    }
+
+    .partner-ship-contact-form{
+        display: none;
+    }
+
+    .footer-content-first{
+        row-gap: 20px;
+    }
+
+    .footer-content-first > div:first-of-type{
+        order: 10;
+        display: block;
+        margin-top: 0;
+    }
+
+    .social-media-buttons{
+        order: 20;
+    }
+
+    .footer-content{
+        padding: 20px 0;
+    }
+
+    .footer-content-second > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-content-first{
+        font-size: 14px;
+    }
+
+    .footer-content-second{
+        font-size: 12px;
+        line-height: 12px;
+    }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const PartnershipForm = () => {
     return (
         <section className="partner-ship-section container">
-            <h2 className="partner-ship-title"></h2>
+            <h2 className="partner-ship-title">Партнёрство</h2>
             <div className="partner-ship-content">
 
                 <div className="partner-ship-contact-actions">
@@ -51,8 +51,10 @@ const PartnershipForm = () => {
                     </div>
                     <div className="contact-form-submit">
                         <button type="submit">Отправить</button>
-                        <input type="checkbox"/>
-                        <p>Даю свое согласие на обработку моих персональных данных</p>
+                        <div>
+                            <input type="checkbox"/>
+                            <p>Даю свое согласие на обработку моих персональных данных</p>
+                        </div>
                     </div>
                 </form>
 

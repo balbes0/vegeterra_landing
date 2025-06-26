@@ -9,7 +9,7 @@ import Benefits from "./sections/Benefits";
 import Values from "./sections/Values";
 import AboutBrand from "./sections/AboutBrand";
 import "./styles/style.css"
-import Header from "./components/Header";
+import Header from "./sections/Header";
 
 function App() {
   return (

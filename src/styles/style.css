@@ -141,17 +141,67 @@ button {
     display: flex;
     justify-content: space-between;
     column-gap: 5px;
+    height: 21px;
 }
 
 .header-actions-item{
-    height: 21px;
-    width: 21px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     background-color: var(--color-white);
     border-radius: 50%;
     align-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-actions-item-switch{
+    background-color: var(--color-white);
+    border-radius: 15px;
+    height: 100%;
+    width: 58px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.language-switch {
+    height: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    color: var(--color-black);
+    user-select: none;
+}
+
+.language-label {
+    margin: 0;
+    z-index: 2;
+}
+
+.language-label.active {
+    color: var(--color-white);
+}
+
+.language-indicator {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-green);
+    border-radius: 15px;
+    left: 0;
+    transition: transform 0.2s;
+    z-index: 1;
+}
+
+.language-indicator.right {
+    transform: translateX(calc(100%));
 }
 
 .about-brand{
@@ -231,8 +281,8 @@ button {
 .process-steps-cards{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
 }
 
 .brand-cycle-card {
@@ -604,13 +654,14 @@ button {
     padding: 6.05% 6.9%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 16%;
+    column-gap: 6.3%;
     overflow: hidden;
 }
 
 .partner-ship-contact-actions{
     display: flex;
     flex-direction: column;
+    max-width: 400px;
 }
 
 .description-contact-actions{
@@ -622,7 +673,7 @@ button {
 }
 
 .title-contact-actions{
-    margin: 30px 0;
+    margin: 7.2% 0;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -660,6 +711,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 440px;
 }
 
 .contact-form-title{
@@ -740,55 +792,167 @@ button {
 }
 
 .footer-content{
+    min-height: 128px;
     border-top: 1px solid var(--color-gray-10);
-    height: 128px;
     box-sizing: content-box;
-}
-
-.header-actions-item-switch{
-    background-color: var(--color-white);
-    border-radius: 15px;
-    width: 58px;
-}
-
-.language-switch {
-    height: 21px;
-    position: relative;
-    background-color: var(--color-white);
-    border-radius: 15px;
-    cursor: pointer;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer-content > div{
+    display: flex;
     justify-content: space-between;
-    padding: 0 6px;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--color-black);
-    user-select: none;
+    align-items: center;
 }
 
-.language-label {
-    z-index: 2;
+.footer-content p {
+    color: var(--color-gray-50);
+    margin: 0;
 }
 
-.language-label.active {
-    color: var(--color-white);
+.footer-content-second > button {
+    color: var(--color-gray-50);
+    border: 1px solid var(--color-gray-30);
+    border-radius: 20px;
+    background: transparent;
+    width: 206px;
+    height: 24px;
 }
 
-.language-indicator {
-    position: absolute;
-    width: 29px;
-    height: 100%;
-    background-color: var(--color-green);
-    border-radius: 12px;
-    left: 0;
-    transition: transform 0.3s ease;
-    transform: translateX(-1px);
-    z-index: 1;
+.footer-content-second > div {
+    display: flex;
 }
 
-.language-indicator.right {
-    transform: translateX(calc(100% + 1px));
+@media (max-width: 960px){
+
+    button{
+        height: 36px;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .header-logo-image{
+        width: 99px;
+        height: 25px;
+    }
+
+    .header-menu-list{
+        column-gap: 20px;
+    }
+
+    .header-menu-link{
+        font-size: 14px;
+    }
+
+    .header-actions{
+        height: 23px;
+    }
+
+    .about-brand-section{
+        height: 600px;
+    }
+
+    .process-steps-section{
+        margin-top: 60px;
+    }
+
+    .benefit-card-description{
+        font-size: 18px;
+        padding: 20px 30px;
+    }
+
+    .services-section{
+        margin-top: 85px;
+    }
+
+    .service-card-image{
+        max-height: 50px;
+    }
+
+    .service-card-title{
+        font-size: 18px;
+    }
+
+    .service-card-list-item{
+        font-size: 18px;
+    }
+
+    .mission-block{
+        height: max(290px, 328px);
+    }
+
+    .mission-title{
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        max-width: 606px;
+    }
+
+    .mission-section p{
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .values-section{
+        margin-top: 40px;
+        column-gap: 1%;
+    }
+
+    .value-card-image{
+        height: 90px
+    }
+
+    .value-card-title{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        max-width: 225px;
+    }
+
+    .value-card-description{
+        max-width: 230px;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .team-block {
+        display: none;
+    }
+
+    .partner-ship-section{
+        margin-bottom: 50px;
+    }
+
+    .partner-ship-content{
+        padding: 4.8% 3.2%;
+        border-radius: 16px;
+    }
+
+    .title-contact-actions{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+    }
+
+    .description-contact-actions{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .contact-form-title{
+        display: none;
+    }
 }

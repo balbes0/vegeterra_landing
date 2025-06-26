@@ -1,7 +1,13 @@
-import React from 'react';
-import LanguageSwitch from "./LanguageSwitch";
+import React, {useState} from 'react';
 
 const Header = () => {
+
+    const [lang, setLang] = useState('ru');
+
+    const toggleLang = () => {
+        setLang(prev => (prev === 'ru' ? 'en' : 'ru'));
+    };
+
     return (
         <header className="header container">
             <a href="#" className="header-logo">
@@ -41,7 +47,11 @@ const Header = () => {
                     <img className="header-actions-item-image" src="/assets/icons/telegram-vector.svg" alt="telegram-vector.svg"/>
                 </a>
                 <div className="header-actions-item-switch">
-                    <LanguageSwitch />
+                    <div className="language-switch" onClick={toggleLang}>
+                        <div className={`language-indicator ${lang === 'en' ? 'right' : 'left'}`} />
+                        <p className={`language-label left-label ${lang === 'ru' ? 'active' : ''}`}>РУ</p>
+                        <p className={`language-label right-label ${lang === 'en' ? 'active' : ''}`}>EN</p>
+                    </div>
                 </div>
             </div>
         </header>

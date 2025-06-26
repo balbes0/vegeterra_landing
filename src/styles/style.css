@@ -279,15 +279,18 @@ button {
 }
 
 .process-steps-cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+    /*gap: 20px;*/
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
 .brand-cycle-card {
     height: 100px;
-    width: 373px;
     display: flex;
     align-items: center;
     align-content: start;
@@ -298,7 +301,6 @@ button {
 
 .brand-cycle-card.with-image{
     background-image: url(../../public/assets/images/cylces-border-arrow.svg);
-    background-repeat: no-repeat;
     background-size: contain;
 }
 
@@ -311,6 +313,10 @@ button {
     height: 60px;
     width: 60px;
     position: relative;
+}
+
+.number-cycle-card > svg{
+
 }
 
 .number-cycle{
@@ -811,6 +817,20 @@ button {
     margin: 0;
 }
 
+.footer-content-first{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer-content-second{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .footer-content-second > button {
     color: var(--color-gray-50);
     border: 1px solid var(--color-gray-30);
@@ -831,7 +851,7 @@ button {
     }
 
     .container {
-        max-width: 960px;
+        max-width: 920px;
     }
 
     .header-logo-image{
@@ -857,6 +877,37 @@ button {
 
     .process-steps-section{
         margin-top: 60px;
+    }
+
+    .brand-cycle-card{
+        width: 293px;
+        height: 79px;
+    }
+
+    .number-cycle-card{
+        width: 47px;
+        height: 47px;
+    }
+
+    .number-cycle-card > svg{
+        width: 47px;
+        height: 47px;
+    }
+
+    .name-cycle-card{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .number-cycle{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+    }
+
+    .description-process-steps-section{
+        font-size: 18px;
     }
 
     .benefit-card-description{

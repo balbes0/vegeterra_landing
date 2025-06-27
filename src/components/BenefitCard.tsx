@@ -8,7 +8,8 @@ type BenefitCardProps = {
 const BenefitCard = ({imageURL, description}: BenefitCardProps) => {
     return (
         <div className="benefit-card">
-            <img className="benefit-card-img" src={imageURL} alt={imageURL}/>
+            <div className="benefit-card-img" style={{ backgroundImage: `url(${imageURL})` }}></div>
+
             <p className="benefit-card-description">{description}</p>
         </div>
     );

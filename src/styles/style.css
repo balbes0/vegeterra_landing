@@ -417,9 +417,11 @@ button {
 }
 
 .benefit-card-img{
+    border-radius: 16px;
     width: 100%;
+    height: 356px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
@@ -894,6 +896,10 @@ button {
 }
 
 .agroconsultation-title{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
     margin: 0;
 }
 
@@ -968,6 +974,10 @@ button {
 
     .description-process-steps-section{
         font-size: 18px;
+    }
+
+    .benefit-card-img{
+        height: 281px;
     }
 
     .benefit-card-description{
@@ -1110,6 +1120,10 @@ button {
         font-size: 28px;
     }
 
+    .benefit-card-img{
+        height: 338px;
+    }
+
     .benefits-section{
         padding-right: 0;
     }
@@ -1176,8 +1190,8 @@ button {
 
     .values-section {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 равные колонки */
-        gap: 30px;                      /* отступ между колонками (по желанию) */
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
         margin-top: 55px;
     }
 
@@ -1245,6 +1259,10 @@ button {
 
     .benefits-section{
         margin-top: 80px;
+    }
+
+    .benefit-card-img{
+        height: 238px;
     }
 
     .benefits-title{
@@ -1420,6 +1438,10 @@ button {
         column-gap: 10px;
     }
 
+    .benefit-card-img{
+        height: 259px;
+    }
+
     .benefits-title{
         font-size: 22px;
     }
@@ -1429,14 +1451,142 @@ button {
         flex-shrink: 0;
     }
 
-    .benefit-card-img{
-        height: 400px;
-        background-size: cover;
-    }
-
     .benefit-card-description{
         padding: 20px 16px;
         font-size: 15px;
         line-height: 16px;
+        margin: -50px 0 0;
+    }
+
+    .service-card-image{
+        height: 45px;
+    }
+
+    .services-section{
+        column-gap: 10px;
+    }
+
+    .service-card-list-item{
+        font-size: 15px;
+        letter-spacing: -0.3px;
+    }
+
+    .service-card{
+        max-width: 240px;
+        max-height: 350px;
+    }
+
+    .partner-ship-title{
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .title-contact-actions{
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0;
+    }
+
+    .actions-buttons{
+        margin-top: 30px;
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 30px;
+    }
+
+    .mission-block{
+        padding: 0;
+        max-height: 290px;
+    }
+
+    .mission-section{
+        border-radius: 0;
+        gap: 24px;
+    }
+
+    .mission-title{
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .mission-section p:first-child{
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 230px;
+    }
+
+    .mission-section p:last-child{
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 230px;
+    }
+
+    .values-section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .value-card{
+        display: grid;
+        grid-template-columns: 50px auto;
+        row-gap: 12px;
+        column-gap: 1%;
+    }
+
+    .value-card-image{
+        height: 35px;
+    }
+
+    .value-card-title{
+        text-align: start;
+    }
+
+    .value-card-description{
+        grid-column: span 2;
+        max-width: 100%;
+        text-align: start;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .agroconsultation-form{
+        margin: 80px 0;
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .contact-form-submit{
+        column-gap: 7%;
+    }
+
+    .contact-form-submit > button {
+        height: 36px;
+        margin-right: auto;
+        width: 120px;
+    }
+
+    .contact-form-submit > div > p {
+        font-size: 12px;
+        line-height: 13px;
+    }
+
+    .footer-content-first > img {
+        order: -2;
+        width: 83px;
+        height: 21px;
+    }
+
+    .social-media-buttons{
+        order: -1;
+    }
+
+    .footer-content-second{
+        margin-top: 20px;
+    }
+
+    .footer-content-second > div {
+        flex-direction: column;
+        align-items: end;
     }
 }

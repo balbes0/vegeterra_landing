@@ -34,7 +34,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-content-second">
-                    <p>Политика обработки персональных данных</p>
+                    <a href="#">Политика обработки персональных данных</a>
                     <button>Подписаться на новости</button>
                     <div>
                         <p>Дизайн сайта</p>

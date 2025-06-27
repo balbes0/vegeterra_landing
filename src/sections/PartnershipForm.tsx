@@ -13,16 +13,16 @@ const PartnershipForm = () => {
                     <div className="actions-buttons">
                         <button>Подробнее о партнёрстве</button>
                         <div className="social-media-buttons">
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="#">
                                 <img src="/assets/icons/youtube-icon-vector.svg" alt="youtube.svg"/>
                             </a>
-                            <a href="#" target="_blank" rel="noopener noreferrer">
+                            <a href="#">
                                 <img src="/assets/icons/vk-icon-vector.svg" alt="vk.svg"/>
                             </a>
-                            <a href="">
+                            <a href="#">
                                 <img src="/assets/icons/whatsapp-icon-vector-2.svg" alt="whatsapp.svg"/>
                             </a>
-                            <a href="">
+                            <a href="#">
                                 <img src="/assets/icons/telegram-icon-vector-2.svg" alt="telegram.svg"/>
                             </a>
                         </div>
@@ -50,7 +50,7 @@ const PartnershipForm = () => {
                         </div>
                     </div>
                     <div className="contact-form-submit">
-                        <button>Отправить</button>
+                        <button type="button">Отправить</button>
                         <div>
                             <input type="checkbox"/>
                             <p>Даю свое согласие на обработку моих персональных данных</p>

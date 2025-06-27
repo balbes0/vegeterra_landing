@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import ServiceCard from "../components/ServiceCard";
 
 const services = [
@@ -31,9 +31,23 @@ const services = [
 ]
 
 const Services = () => {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const scrollLeft = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+    };
+
     return (
         <section>
-            <div  className="services-section container">
+            <div  className="services-section container" ref={scrollRef}>
                 {
                     services.map((service, index) => (
                         <ServiceCard key={index} iconURL={service.iconURL} title={service.title} items={service.items} />
@@ -41,7 +55,7 @@ const Services = () => {
                 }
             </div>
             <div className="slider-controls">
-                <button>
+                <button onClick={scrollLeft}>
                     <svg
                         width="9"
                         height="14"
@@ -49,10 +63,10 @@ const Services = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path d="M8 13L1 7L8 1" stroke="#DCDCDC" stroke-linecap="square" />
+                        <path d="M8 13L1 7L8 1" stroke="#DCDCDC" strokeLinecap="square" />
                     </svg>
                 </button>
-                <button>
+                <button onClick={scrollRight}>
                     <svg
                         width="9"
                         height="14"
@@ -60,7 +74,7 @@ const Services = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <path d="M1 13L8 7L1 1" stroke="white" stroke-linecap="square" />
+                        <path d="M1 13L8 7L1 1" stroke="white" strokeLinecap="square" />
                     </svg>
                 </button>
             </div>

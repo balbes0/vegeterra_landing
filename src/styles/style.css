@@ -79,7 +79,8 @@ button {
     height: 32px;
     border-radius: 20px;
     align-items: center;
-    border: none
+    border: none;
+    transition: 0.2s;
 }
 
 .container{
@@ -162,6 +163,13 @@ button {
     margin: 0 3px;
     padding: 23px 0;
     display: inline-block;
+}
+
+.header-menu-link:hover {
+    color: var(--color-white-alternate);
+}
+.header-menu-link:active {
+    color: currentColor;
 }
 
 .header-menu-item.active .header-menu-link {
@@ -296,6 +304,13 @@ button {
     background-color: var(--color-white);
 }
 
+.about-brand-button:hover{
+    background-color: var(--color-white-alternate);
+}
+.about-brand-button:active{
+    background-color: var(--color-white);
+}
+
 .process-steps-section{
     display: flex;
     flex-direction: column;
@@ -329,6 +344,14 @@ button {
     align-self: center;
 }
 
+.button-process-steps-section:hover{
+    background-color: var(--color-green-dark);
+}
+
+.button-process-steps-section:active{
+    background-color: var(--color-green);
+}
+
 .button-camera-icon{
     margin-left: 5px;
 }
@@ -350,6 +373,15 @@ button {
     row-gap: 20px;
 }
 
+.process-steps-alternative-click-zone{
+    position: absolute;
+    z-index: 1;
+    height: 125px;
+    left: 0;
+    right: 0;
+    top: -10px;
+}
+
 .process-steps-alternative-background{
     z-index: -1;
     width: 480px;
@@ -360,6 +392,7 @@ button {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0) scale(1.125) translateY(30px);
+    transition: transform 0.3s;
 }
 
 .alternative-background-dot-container{
@@ -425,6 +458,7 @@ button {
     background: var(--color-white);
     width: 178px;
     height: 29px;
+    pointer-events: auto;
 }
 
 .brand-cycle-card {
@@ -496,6 +530,7 @@ button {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    scroll-behavior: auto;
 }
 
 .benefit-card{
@@ -503,6 +538,7 @@ button {
     flex-direction: column;
     border-radius: 16px;
     max-width: 570px;
+    scroll-snap-align: start;
 }
 
 .benefit-card-img{
@@ -716,12 +752,21 @@ button {
     height: 90px;
     width: 90px;
     border-radius: 50px;
-    border: 3px solid #FFF;
+    border: 3px solid var(--color-white);
     overflow: hidden;
+}
+
+.team-selector-button:hover{
+    border: 3px solid var(--color-white-alternate);
+}
+
+.team-selector-button:active{
+    border: 3px solid var(--color-white);
 }
 
 .team-selector-button.isSelected{
     border-width: 5px;
+    background-color: var(--color-green-light);
 }
 
 .team-selector-button-image{
@@ -837,6 +882,14 @@ button {
     color: var(--color-white);
 }
 
+.partner-ship-section button:hover{
+    background: var(--color-green-dark);
+}
+
+.partner-ship-section button:active{
+    background: var(--color-green);
+}
+
 .social-media-buttons{
     display: flex;
     column-gap: 12px;
@@ -845,6 +898,10 @@ button {
 
 .social-media-buttons a {
     align-content: center;
+}
+
+.social-media-buttons a img{
+    fill: red;
 }
 
 .partner-ship-contact-form{
@@ -964,6 +1021,17 @@ button {
     line-height: 20px;
 }
 
+.footer-content-second > a {
+    color: var(--color-gray-50);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer-content-second > a:hover {
+    color: var(--color-gray-80);
+}
+
+
 .footer-content-second > button {
     color: var(--color-gray-50);
     border: 1px solid var(--color-gray-30);
@@ -971,6 +1039,13 @@ button {
     background: transparent;
     width: 206px;
     height: 24px;
+}
+
+.footer-content-second > button:hover{
+    background-color: var(--color-white-alternate);
+}
+.footer-content-second > button:active{
+    background-color: var(--color-white);
 }
 
 .footer-content-second > div {
@@ -1175,16 +1250,70 @@ button {
         padding-top: 20px;
     }
 
-    .header-menu{
-        display: none;
-    }
-
     .header-actions a {
         display: none;
     }
 
     .header-burger{
         display: inline-flex;
+    }
+
+    .header-menu {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+        transform: translateY(-100%);
+        transition: 0.3s ease;
+        z-index: 10;
+    }
+
+    .header-menu.open {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .header-menu-list {
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 20px;
+        color: var(--color-gray-80);
+        width: 100%;
+    }
+
+    .header-menu-link{
+        width: 100% ;
+    }
+
+    .header-burger.active{
+        z-index: 10;
+    }
+
+    .header-burger.active .burger-line {
+        background-color: transparent;
+        position: relative;
+    }
+
+    .header-burger.active .burger-line:nth-child(2)::before,
+    .header-burger.active .burger-line:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-black);
+        left: 0;
+        top: 0;
+        transition: transform 0.3s;
+    }
+
+    .header-burger.active .burger-line:nth-child(2)::before {
+        transform: rotate(45deg);
+    }
+
+    .header-burger.active .burger-line:nth-child(2)::after {
+        transform: rotate(-45deg);
     }
 }
 

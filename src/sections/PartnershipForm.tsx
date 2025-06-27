@@ -49,9 +49,9 @@ const PartnershipForm = () => {
                             <input id="contact-form-message" type="text" placeholder="Введите ваше сообщение"/>
                         </div>
                     </div>
-                    <div className="contact-form-submit">
+                    <div>
                         <button type="submit">Отправить</button>
-                        <div>
+                        <div  className="contact-form-submit">
                             <input type="checkbox"/>
                             <p>Даю свое согласие на обработку моих персональных данных</p>
                         </div>

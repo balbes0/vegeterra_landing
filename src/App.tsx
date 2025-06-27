@@ -16,7 +16,7 @@ function App() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const handler = () => setIsMobile(window.innerWidth <= 480);
+        const handler = () => setIsMobile(window.innerWidth <= 500);
         handler();
         window.addEventListener("resize", handler);
         return () => window.removeEventListener("resize", handler);

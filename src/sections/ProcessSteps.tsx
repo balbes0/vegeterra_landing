@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Cycle from "../components/Cycle";
 
 const steps = [
@@ -11,6 +11,9 @@ const steps = [
 ];
 
 const ProcessSteps = () => {
+
+    const [currentStep, setCurrentStep] = useState(0);
+
     return (
         <section className="process-steps-section container">
 
@@ -35,6 +38,30 @@ const ProcessSteps = () => {
                 Смотреть видео
                 <img className="button-camera-icon" src="/assets/icons/camera-icon-vector.svg" alt="camera-icon-vector.svg"/>
             </button>
+
+            <div className="process-steps-alternative">
+                {/*<img className="process-steps-alternative-background" src="/assets/images/process-steps-circle.svg" alt="process-steps-circle.svg"/>*/}
+                <div className="process-steps-alternative-background">
+                    {
+                        steps.map((step, index) => {
+                            const value = 18 * index;
+                            return (
+                                <div key={index} className="alternative-background-dot-container" style={{transform: `rotate(${value}deg)`}}>
+                                    <div className={`alternative-background-dot ${currentStep === index && "isCurrent"}`}></div>
+                                </div>
+                            );
+                        })
+                    }
+                </div>
+                <h2 className="process-steps-counter">
+                     <span>{currentStep+1}</span>/<span>{steps.length}</span>
+                </h2>
+                <p className="process-steps-alternative-name">Разрабатываем собственные технологии</p>
+                <button className="process-steps-alternative-button">
+                    Подробнее
+                    <img className="button-camera-icon" src="/assets/icons/arrow-vector.svg" alt="camera-icon-vector.svg"/>
+                </button>
+            </div>
         </section>
     );
 };

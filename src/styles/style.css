@@ -86,6 +86,7 @@ button {
     max-width: 1160px;
     padding: 0 20px;
     margin: auto;
+    overflow: hidden;
 }
 
 .slider-controls {
@@ -336,6 +337,94 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.process-steps-alternative{
+    display: none;
+    margin-top: 30px;
+    padding-top: 40px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.process-steps-alternative-background{
+    z-index: -1;
+    width: 480px;
+    height: 480px;
+    border: 1px solid var(--color-white-alternate);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1.125) translateY(30px);
+}
+
+.alternative-background-dot-container{
+    position: absolute;
+    left: 50%;
+    height: 100%;
+}
+
+.alternative-background-dot{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--color-white-alternate);
+    background: var(--color-white);
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alternative-background-dot.isCurrent::before {
+    content: "";
+    width: 33%;
+    height: 33%;
+    background-color: var(--color-green);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.process-steps-counter {
+    margin: 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--color-white-alternate);
+}
+
+.process-steps-counter > span:first-child{
+    color: var(--color-green);
+}
+
+.process-steps-alternative-name{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    max-width: 300px;
+    margin: 0;
+}
+
+.process-steps-alternative-button{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid var(--color-white-alternate);
+    background: var(--color-white);
+    width: 178px;
+    height: 29px;
 }
 
 .brand-cycle-card {
@@ -903,16 +992,7 @@ button {
     margin: 0;
 }
 
-@media (max-width: 960px){
-
-    button{
-        height: 36px;
-    }
-
-    .container {
-        max-width: 920px;
-    }
-
+@media (max-width: 1050px){
     .header-logo-image{
         width: 99px;
         height: 25px;
@@ -936,6 +1016,13 @@ button {
 
     .language-switch{
         padding: 0 8px;
+    }
+}
+
+@media (max-width: 960px){
+
+    button{
+        height: 36px;
     }
 
     .about-brand-section{
@@ -1078,7 +1165,7 @@ button {
     }
 }
 
-@media (max-width: 640px){
+@media (max-width: 900px){
     .header-logo-image{
         width: 119px;
         height: 30px;
@@ -1099,11 +1186,60 @@ button {
     .header-burger{
         display: inline-flex;
     }
+}
 
-    .about-brand-title{
-        font-size: 36px;
+@media (max-width: 840px){
+    .partner-ship-content{
+        padding: 0;
+        border: none;
+        border-radius: 0;
     }
 
+    .actions-buttons{
+        margin-top: 40px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        row-gap: 50px;
+        align-items: start;
+    }
+
+    .contact-form-inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form-submit{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        row-gap: 15px;
+    }
+
+    .contact-form-input-block > p {
+        font-size: 14px;
+    }
+
+    .title-contact-actions{
+        font-size: 18px;
+    }
+
+    .footer-content-first{
+        flex-wrap: wrap;
+    }
+
+    .footer-content-first > div:first-of-type{
+        order: 999;
+        display: flex;
+        column-gap: 20px;
+        margin-top: 15px;
+    }
+
+    .footer-content-second>button{
+        display: none;
+    }
+}
+
+@media (max-width: 740px){
     .process-steps-section{
         margin-top: 50px;
     }
@@ -1114,6 +1250,12 @@ button {
 
     .process-steps-cards{
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px){
+    .about-brand-title{
+        font-size: 36px;
     }
 
     .benefits-title{
@@ -1195,57 +1337,95 @@ button {
         margin-top: 55px;
     }
 
-    .partner-ship-content{
-        padding: 0;
-        border: none;
-        border-radius: 0;
-    }
-
-    .actions-buttons{
-        margin-top: 40px;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        row-gap: 50px;
-        align-items: start;
-    }
-
-    .contact-form-inputs{
+    .slider-controls{
         display: flex;
-        flex-direction: column;
     }
+}
 
-    .contact-form-submit{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: start;
-        row-gap: 15px;
-    }
-
-    .contact-form-input-block > p {
-        font-size: 14px;
-    }
-
-    .title-contact-actions{
-        font-size: 18px;
-    }
-
+@media (max-width: 540px){
     .footer-content-first{
-        flex-wrap: wrap;
+        row-gap: 20px;
     }
 
     .footer-content-first > div:first-of-type{
-        order: 999;
-        display: flex;
-        column-gap: 20px;
-        margin-top: 15px;
+        order: 10;
+        display: block;
+        margin-top: 0;
     }
 
-    .footer-content-second>button{
+    .social-media-buttons{
+        order: 20;
+    }
+
+    .footer-content{
+        padding: 20px 0;
+    }
+
+    .footer-content-second > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-content-first{
+        font-size: 14px;
+    }
+
+    .footer-content-second{
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media (max-width: 500px){
+    .process-steps-cards{
         display: none;
     }
 
-    .slider-controls{
+    .process-steps-alternative{
         display: flex;
+    }
+
+    .button-process-steps-section{
+        align-self: start;
+    }
+
+    .partner-ship-section{
+        margin-top: 30px;
+    }
+
+    .partner-ship-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .partner-ship-contact-actions{
+        max-width: 100%;
+    }
+
+    .title-contact-actions{
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .actions-buttons{
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        gap: 30px;
+    }
+
+    .partner-ship-contact-form{
+        display: none;
+    }
+
+    .contact-form-submit{
+        flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -1321,77 +1501,6 @@ button {
         font-weight: 400;
         line-height: 15px;
     }
-
-    .partner-ship-section{
-        margin-top: 30px;
-    }
-
-    .partner-ship-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .partner-ship-contact-actions{
-        max-width: 100%;
-    }
-
-    .title-contact-actions{
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 26px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-
-    .actions-buttons{
-        flex-direction: row;
-        align-items: center;
-        justify-content: start;
-        column-gap: 30px;
-    }
-
-    .partner-ship-contact-form{
-        display: none;
-    }
-
-    .contact-form-submit{
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .footer-content-first{
-        row-gap: 20px;
-    }
-
-    .footer-content-first > div:first-of-type{
-        order: 10;
-        display: block;
-        margin-top: 0;
-    }
-
-    .social-media-buttons{
-        order: 20;
-    }
-
-    .footer-content{
-        padding: 20px 0;
-    }
-
-    .footer-content-second > div {
-        display: flex;
-        align-items: center;
-    }
-
-    .footer-content-first{
-        font-size: 14px;
-    }
-
-    .footer-content-second{
-        font-size: 12px;
-        line-height: 12px;
-    }
 }
 
 @media (max-width: 320px){
@@ -1430,8 +1539,43 @@ button {
         display: none;
     }
 
+    .alternative-background-dot{
+        width: 20px;
+        height: 20px;
+    }
+
+    .process-steps-alternative-background{
+        width: 320px;
+        height: 320px;
+    }
+
+    .process-steps-counter{
+        font-size: 20px;
+    }
+
+    .process-steps-alternative-name{
+        font-size: 18px;
+        line-height: 18px;
+        max-width: 230px;
+    }
+
+    .process-steps-alternative-button{
+        width: 143px;
+        height: 21px;
+        font-size: 10px;
+    }
+
+    .process-steps-alternative-button > img{
+        width: 23px;
+        height: 4px;
+    }
+
     .button-process-steps-section{
         align-self: start;
+    }
+
+    .benefits-section{
+        margin-top: 60px;
     }
 
     .benefit-card-container{
@@ -1472,7 +1616,7 @@ button {
     }
 
     .service-card{
-        max-width: 240px;
+        max-width: 220px;
         max-height: 350px;
     }
 
@@ -1489,7 +1633,7 @@ button {
 
     .actions-buttons{
         margin-top: 30px;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: start;
         gap: 30px;
     }
